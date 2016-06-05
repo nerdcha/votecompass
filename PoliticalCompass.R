@@ -51,7 +51,7 @@ commoSoln <- lp("min", f.obj, rbind(-econValues, socValues),
 abbottSoln <- lp("min", f.obj, rbind(econValues, -socValues),
                c(">=", "<="), c(50,-50), all.bin=TRUE)
 
-d$FullText[glibSoln$solution == 1]
-d$FullText[racistSoln$solution == 1]
+print(d$FullText[glibSoln$solution == 1])
+print(d$FullText[commoSoln$solution == 1])
 
 
